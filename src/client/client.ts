@@ -33,7 +33,7 @@ scene.add(torus)
 cube.position.z += 1;
 
 torus.position.z -= 50;
-torus.position.x -= 45;
+torus.position.x += 45;
 
 window.addEventListener('resize', onWindowResize, false)
 function onWindowResize() {
@@ -175,7 +175,7 @@ barba.init({
                 return tl.finished;
             },
             enter(){
-                camera.position.x = 2;
+                camera.position.x = 1;
             },
             after({ next }) {
                 const tl = anime.timeline({
@@ -217,7 +217,7 @@ barba.init({
                 tl.add({
                     targets: swiper,
                     left: 0,
-                    // scaleX: [0, 1],
+                    scaleX: [0, 1],
                 });
 
                 tl.add(
@@ -230,8 +230,7 @@ barba.init({
                 return tl.finished;
             },
             enter(){
-                camera.position.x = 4;
-                // moveCamera(4);
+                camera.position.x = 3;
             },
             after({ next }) {
                 const tl = anime.timeline({
@@ -247,8 +246,8 @@ barba.init({
                 tl.add(
                     {
                         targets: swiper,
-                        // left: screen.width,
-                        // scaleX: [1, 0],
+                        left: screen.width,
+                        scaleX: [1, 0],
                     },
                     0
                 );
@@ -273,7 +272,7 @@ barba.init({
                 tl.add({
                     targets: swiper,
                     left: 0,
-                    // scaleX: [0, 1],
+                    scaleX: [0, 1],
                 });
 
                 tl.add(
@@ -287,8 +286,6 @@ barba.init({
             },
             enter(){
                 camera.position.x = 6;
-                // camera.translateX(6);
-                // smoothTransition(6)
             },
             after({ next }) {
                 const tl = anime.timeline({
@@ -304,8 +301,8 @@ barba.init({
                 tl.add(
                     {
                         targets: swiper,
-                        // left: screen.width,
-                        // scaleX: [1, 0],
+                        left: screen.width,
+                        scaleX: [1, 0],
                     },
                     0
                 );
